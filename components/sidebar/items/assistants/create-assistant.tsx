@@ -107,7 +107,7 @@ export const CreateAssistant: FC<CreateAssistantProps> = ({
       "llama3-groq-70b-8192-tool-use-preview"
     ]
     const isModelCompatible = compatibleModels.includes(
-      assistantChatSettings.model
+      assistantChatSettings.model as LLMID
     )
 
     return isModelCompatible
