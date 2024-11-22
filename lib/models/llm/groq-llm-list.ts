@@ -2,26 +2,26 @@ import { LLM } from "@/types"
 
 const GROQ_PLATORM_LINK = "https://groq.com/"
 
-const LLaMA3_8B: LLM = {
-  modelId: "llama3-8b-8192",
-  modelName: "LLaMA3-8b-chat",
+const LLaMA3_1_8B: LLM = {
+  modelId: "llama3.1-8b-instant",
+  modelName: "LLaMA3.1 8b",
   provider: "groq",
-  hostedId: "llama3-8b-8192",
+  hostedId: "llama3.1-8b-instant",
   platformLink: GROQ_PLATORM_LINK,
   imageInput: false,
   pricing: {
     currency: "USD",
     unit: "1M tokens",
     inputCost: 0.05,
-    outputCost: 0.1
+    outputCost: 0.08
   }
 }
 
-const LLaMA3_70B: LLM = {
-  modelId: "llama3-70b-8192",
-  modelName: "LLaMA3-70b-chat",
+const LLaMA3_1_70B: LLM = {
+  modelId: "llama3.1-70b-versatile",
+  modelName: "LLaMA3.1 70b",
   provider: "groq",
-  hostedId: "llama3-70b-4096",
+  hostedId: "llama3.1-70b-versatile",
   platformLink: GROQ_PLATORM_LINK,
   imageInput: false,
   pricing: {
@@ -32,39 +32,41 @@ const LLaMA3_70B: LLM = {
   }
 }
 
-const MIXTRAL_8X7B: LLM = {
-  modelId: "mixtral-8x7b-32768",
-  modelName: "Mixtral-8x7b-Instruct-v0.1",
+const LLaMA3_2_3B_PREVIEW: LLM = {
+  modelId: "llama3.2-3b-preview",
+  modelName: "LLaMA3.2 3b (preview)",
   provider: "groq",
-  hostedId: "mixtral-8x7b-32768",
+  hostedId: "llama3.2-3b-preview",
   platformLink: GROQ_PLATORM_LINK,
   imageInput: false,
   pricing: {
     currency: "USD",
     unit: "1M tokens",
-    inputCost: 0.27,
-    outputCost: 0.27
+    inputCost: 0.06,
+    outputCost: 0.06
   }
 }
 
-const GEMMA_7B_IT: LLM = {
-  modelId: "gemma-7b-it",
-  modelName: "Gemma-7b-It",
+const LLaMA3_GROQ: LLM = {
+  modelId: "llama3-groq-70b-8192-tool-use-preview",
+  modelName: "LLaMA3 70b (Groq)",
   provider: "groq",
-  hostedId: "gemma-7b-it",
+  hostedId: "llama3-groq-70b-8192-tool-use-preview",
   platformLink: GROQ_PLATORM_LINK,
   imageInput: false,
   pricing: {
     currency: "USD",
     unit: "1M tokens",
-    inputCost: 0.15,
-    outputCost: 0.15
+    inputCost: 0.89,
+    outputCost: 0.89
   }
 }
+
+
 
 export const GROQ_LLM_LIST: LLM[] = [
-  LLaMA3_8B,
-  LLaMA3_70B,
-  MIXTRAL_8X7B,
-  GEMMA_7B_IT
+  LLaMA3_2_3B_PREVIEW,
+  LLaMA3_1_8B,
+  LLaMA3_1_70B,
+  LLaMA3_GROQ
 ]

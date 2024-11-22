@@ -2,20 +2,25 @@ import { LLM } from "@/types"
 
 const MISTRAL_PLATORM_LINK = "https://docs.mistral.ai/"
 
-// Mistral Models (UPDATED 12/21/23) -----------------------------
-
-// Mistral 7B (UPDATED 12/21/23)
-const MISTRAL_7B: LLM = {
-  modelId: "mistral-tiny",
-  modelName: "Mistral Tiny",
+// Mistral Models -----------------------------
+// Mistral Nemo
+const MISTRAL_NEMO: LLM = {
+  modelId: "open-mistral-nemo",
+  modelName: "Mistral Nemo",
   provider: "mistral",
-  hostedId: "mistral-tiny",
+  hostedId: "open-mistral-nemo",
   platformLink: MISTRAL_PLATORM_LINK,
-  imageInput: false
+  imageInput: false,
+  pricing: {
+    currency: "USD",
+    unit: "1M tokens",
+    inputCost: 0,
+    outputCost: 0
+  }
 }
 
-// Mixtral (UPDATED 12/21/23)
-const MIXTRAL: LLM = {
+// Mistral Small (UPDATED 12/21/23)
+const MISTRAL_SMALL: LLM = {
   modelId: "mistral-small-latest",
   modelName: "Mistral Small",
   provider: "mistral",
@@ -25,28 +30,12 @@ const MIXTRAL: LLM = {
   pricing: {
     currency: "USD",
     unit: "1M tokens",
-    inputCost: 2,
-    outputCost: 6
+    inputCost: 0,
+    outputCost: 0
   }
 }
 
-// Mistral Medium (UPDATED 12/21/23)
-const MISTRAL_MEDIUM: LLM = {
-  modelId: "mistral-medium-latest",
-  modelName: "Mistral Medium",
-  provider: "mistral",
-  hostedId: "mistral-medium-latest",
-  platformLink: MISTRAL_PLATORM_LINK,
-  imageInput: false,
-  pricing: {
-    currency: "USD",
-    unit: "1M tokens",
-    inputCost: 2.7,
-    outputCost: 8.1
-  }
-}
-
-// Mistral Large (UPDATED 03/05/24)
+// Mistral Large
 const MISTRAL_LARGE: LLM = {
   modelId: "mistral-large-latest",
   modelName: "Mistral Large",
@@ -57,14 +46,13 @@ const MISTRAL_LARGE: LLM = {
   pricing: {
     currency: "USD",
     unit: "1M tokens",
-    inputCost: 8,
-    outputCost: 24
+    inputCost: 0,
+    outputCost: 0
   }
 }
 
 export const MISTRAL_LLM_LIST: LLM[] = [
-  MISTRAL_7B,
-  MIXTRAL,
-  MISTRAL_MEDIUM,
+  MISTRAL_NEMO,
+  MISTRAL_SMALL,
   MISTRAL_LARGE
 ]

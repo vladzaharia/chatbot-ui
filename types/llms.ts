@@ -11,6 +11,10 @@ export type LLMID =
 // OpenAI Models (UPDATED 5/13/24)
 export type OpenAILLMID =
   | "gpt-4o" // GPT-4o
+  | "gpt-4o-mini" // GPT-4o
+  | "chatgpt-4o-latest" // ChatGPT's GPT-4o
+  | "o1-preview" // GPT-o1 preview
+  | "o1-mini" // GPT-o1 mini preview
   | "gpt-4-turbo-preview" // GPT-4 Turbo
   | "gpt-4-vision-preview" // GPT-4 Vision
   | "gpt-4" // GPT-4
@@ -25,41 +29,30 @@ export type GoogleLLMID =
 
 // Anthropic Models
 export type AnthropicLLMID =
-  | "claude-2.1" // Claude 2
-  | "claude-instant-1.2" // Claude Instant
-  | "claude-3-haiku-20240307" // Claude 3 Haiku
-  | "claude-3-sonnet-20240229" // Claude 3 Sonnet
-  | "claude-3-opus-20240229" // Claude 3 Opus
-  | "claude-3-5-sonnet-20240620" // Claude 3.5 Sonnet
+  | "claude-3-opus-latest" // Claude 3 Opus
+  | "claude-3-5-haiku-latest" // Claude 3.5 Haiku
+  | "claude-3-5-sonnet-latest" // Claude 3.5 Sonnet
 
 // Mistral Models
 export type MistralLLMID =
-  | "mistral-tiny" // Mistral Tiny
+  | "open-mistral-nemo" // Mistral Nemo
   | "mistral-small-latest" // Mistral Small
-  | "mistral-medium-latest" // Mistral Medium
   | "mistral-large-latest" // Mistral Large
 
 export type GroqLLMID =
-  | "llama3-8b-8192" // LLaMA3-8b
-  | "llama3-70b-8192" // LLaMA3-70b
-  | "mixtral-8x7b-32768" // Mixtral-8x7b
-  | "gemma-7b-it" // Gemma-7b IT
+  | "llama3-groq-70b-8192-tool-use-preview" // LLaMA3 Groq
+  | "llama3.1-70b-versatile" // LLaMA3.1-70b
+  | "llama3.1-8b-instant" // LLaMA3.1-8b
+  | "llama3.2-3b-preview" // LLaMA3.2-3b (preview)
 
 // Perplexity Models (UPDATED 1/31/24)
 export type PerplexityLLMID =
-  | "pplx-7b-online" // Perplexity Online 7B
-  | "pplx-70b-online" // Perplexity Online 70B
-  | "pplx-7b-chat" // Perplexity Chat 7B
-  | "pplx-70b-chat" // Perplexity Chat 70B
-  | "mixtral-8x7b-instruct" // Mixtral 8x7B Instruct
-  | "mistral-7b-instruct" // Mistral 7B Instruct
-  | "llama-2-70b-chat" // Llama2 70B Chat
-  | "codellama-34b-instruct" // CodeLlama 34B Instruct
-  | "codellama-70b-instruct" // CodeLlama 70B Instruct
-  | "sonar-small-chat" // Sonar Small Chat
-  | "sonar-small-online" // Sonar Small Online
-  | "sonar-medium-chat" // Sonar Medium Chat
-  | "sonar-medium-online" // Sonar Medium Online
+  | "llama-3.1-sonar-small-128k-chat" // Sonar Small Chat
+  | "llama-3.1-sonar-small-128k-online" // Sonar Small Online
+  | "llama-3.1-sonar-medium-128k-chat" // Sonar Medium Chat
+  | "llama-3.1-sonar-medium-128k-online" // Sonar Medium Online
+  | "llama-3.1-sonar-large-128k-chat" // Sonar Large Chat
+  | "llama-3.1-sonar-large-128k-online" // Sonar Large Online
 
 export interface LLM {
   modelId: LLMID
