@@ -3,7 +3,7 @@ import { LLM } from "@/types"
 const OPENAI_PLATORM_LINK = "https://platform.openai.com/docs/overview"
 
 // OpenAI Models -----------------------------
-const GPT4o: LLM = {
+const GPT_4O: LLM = {
   modelId: "gpt-4o",
   modelName: "GPT-4o",
   provider: "openai",
@@ -17,7 +17,7 @@ const GPT4o: LLM = {
     outputCost: 10
   }
 }
-const GPT4oMini: LLM = {
+const GPT_4O_MINI: LLM = {
   modelId: "gpt-4o-mini",
   modelName: "GPT-4o mini",
   provider: "openai",
@@ -31,7 +31,7 @@ const GPT4oMini: LLM = {
     outputCost: 0.60
   }
 }
-const ChatGPT4o: LLM = {
+const CHATGPT_4O: LLM = {
   modelId: "chatgpt-4o-latest",
   modelName: "ChatGPT GPT-4o",
   provider: "openai",
@@ -47,7 +47,7 @@ const ChatGPT4o: LLM = {
 }
 
 // Preview models
-const GPTo1Preview: LLM = {
+const GPT_O1_PREVIEW: LLM = {
   modelId: "o1-preview",
   modelName: "GPT-o1 (preview)",
   provider: "openai",
@@ -61,7 +61,7 @@ const GPTo1Preview: LLM = {
     outputCost: 60
   }
 }
-const GPTo1Mini: LLM = {
+const GPT_O1_MINI: LLM = {
   modelId: "o1-mini",
   modelName: "GPT-o1 mini (preview)",
   provider: "openai",
@@ -77,9 +77,9 @@ const GPTo1Mini: LLM = {
 }
 
 export const OPENAI_LLM_LIST: LLM[] = [
-  GPT4o,
-  GPT4oMini,
-  ChatGPT4o,
-  GPTo1Preview,
-  GPTo1Mini
+  GPT_4O_MINI,
+  GPT_4O,
+  CHATGPT_4O,
+  GPT_O1_MINI,
+  GPT_O1_PREVIEW,
 ]

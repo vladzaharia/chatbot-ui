@@ -6,10 +6,10 @@ const ANTHROPIC_PLATFORM_LINK =
 // Anthropic Models -----------------------------
 // Claude 3.5
 const CLAUDE_3_5_HAIKU: LLM = {
-  modelId: "claude-3-5-haiku-latest",
+  modelId: "claude-3-5-haiku-20241022",
   modelName: "Claude 3.5 Haiku",
   provider: "anthropic",
-  hostedId: "claude-3-5-haiku-latest",
+  hostedId: "claude-3-5-haiku-20241022",
   platformLink: ANTHROPIC_PLATFORM_LINK,
   imageInput: true,
   pricing: {
@@ -20,10 +20,10 @@ const CLAUDE_3_5_HAIKU: LLM = {
   }
 }
 const CLAUDE_3_5_SONNET: LLM = {
-  modelId: "claude-3-5-sonnet-latest",
+  modelId: "claude-3-5-sonnet-20241022",
   modelName: "Claude 3.5 Sonnet",
   provider: "anthropic",
-  hostedId: "claude-3-5-sonnet-latest",
+  hostedId: "claude-3-5-sonnet-20241022",
   platformLink: ANTHROPIC_PLATFORM_LINK,
   imageInput: true,
   pricing: {
@@ -36,10 +36,10 @@ const CLAUDE_3_5_SONNET: LLM = {
 
 // Claude 3
 const CLAUDE_3_OPUS: LLM = {
-  modelId: "claude-3-opus-latest",
+  modelId: "claude-3-opus-20240229",
   modelName: "Claude 3 Opus",
   provider: "anthropic",
-  hostedId: "claude-3-opus-latest",
+  hostedId: "claude-3-opus-20240229",
   platformLink: ANTHROPIC_PLATFORM_LINK,
   imageInput: true,
   pricing: {
